@@ -37,7 +37,8 @@
                 @input="changeScoreTwo"/>
         </div>
     </div>
-    <button @click="addEntry" :disabled="!isValidEntry">Add Entry</button>
+    <button :disabled="!isValidEntry"
+        @click="addEntry">Add Entry</button>
 </div>
 </template>
 
@@ -68,27 +69,27 @@ export default {
 }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 .players-vs {
     display: flex;
-}
 
-.player {
-    padding: 0.5rem 0;
-    flex: 1;
+    .player {
+        padding: 0.5rem 0;
+        flex: 1;
 
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 
-.score-input {
-    width: 50%;
-    height: 100px;
-    font-size: 3.0rem;
-}
+    .score-input {
+        width: 50%;
+        height: 100px;
+        font-size: 3.0rem;
+    }
 
-.player-input {
-    width: 95%;
+    .player-input {
+        width: 95%;
+    }
 }
 </style>

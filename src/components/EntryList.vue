@@ -1,7 +1,7 @@
 <template>
-  <div id="entry-list">
+  <div>
     <h2>Entries</h2>
-    <div>
+    <div id="entry-list">
         <div v-for="entry in entries" :key="entry.id" class="entry">
           <div class="name-one">{{entry.nameOne}}</div>
           <div class="score">{{entry.score}}</div>
@@ -30,17 +30,17 @@ export default {
 }
 </script>
 
-<style scoped>
-  ul {
+<style lang="scss" scoped>
+  #entry-list {
     background: rgb(110, 73, 4);
-  }
 
-  .entry {
-    display: flex;
-    text-align: center;
-  }
+    .entry {
+      display: flex;
+      text-align: center;
+    }
 
-  .score, .name-one, .name-two {
-    flex: 1;
+    .score, .name-one, .name-two {
+      flex: 1;
+    }
   }
 </style>
