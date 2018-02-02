@@ -15,7 +15,10 @@ import { mapGetters } from "vuex";
 export default {
   computed: mapGetters([
     "allPlayers"
-  ])
+  ]),
+  created() {
+    this.$store.dispatch("getAllPlayers");
+  }
 }
 </script>
 

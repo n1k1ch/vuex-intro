@@ -26,7 +26,10 @@ export default {
   computed: mapGetters([
       "entries",
       "canAddEntry"
-  ])
+  ]),
+  created() {
+    this.$store.dispatch("getAllEntries");
+  }
 }
 </script>
 
