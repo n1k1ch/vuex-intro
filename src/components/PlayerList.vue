@@ -2,20 +2,20 @@
   <div id="player-list">
     <h2>Players</h2>
     <ul>
-        <li v-for="player in players" :key="player.id">
-            {{ player }}
+        <li v-for="player in allPlayers" :key="player.id">
+            {{ player.name }}
         </li>
     </ul>
   </div>
 </template>
 
 <script>
+import { mapGetters } from "vuex";
+
 export default {
-  props: ["players"],
-  data () {
-    return {
-    }
-  }
+  computed: mapGetters([
+    "allPlayers"
+  ])
 }
 </script>
 
